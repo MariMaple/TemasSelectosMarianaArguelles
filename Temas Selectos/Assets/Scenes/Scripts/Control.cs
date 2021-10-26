@@ -15,7 +15,7 @@ public class Control : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.LeftArrow)||Input.GetKey("a"))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey("a"))
         {
             transform.position += Vector3.left * velocidad * Time.deltaTime;
         }
@@ -30,6 +30,14 @@ public class Control : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s"))
         {
             transform.position += Vector3.back * velocidad * Time.deltaTime;
+        }
+        if (Input.GetKey("q"))
+        {
+            transform.Rotate(new Vector3(0f, -90f, 0f) * Time.deltaTime);
+        }
+        if (Input.GetKey("e"))
+        {
+            transform.Rotate(new Vector3(0f, 90f, 0f) * Time.deltaTime);
         }
     }
 }
