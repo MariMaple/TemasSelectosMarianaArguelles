@@ -8,15 +8,28 @@ public class FoxAnimController : MonoBehaviour
     public int randomize = 0;
     public int mov = 0;
     public Animator AnimController;
+    public AudioSource Audio;
     // Start is called before the first frame update
     void Start()
     {
+        Audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        AnimController.SetInteger("state", 2);
+        if (mov == 1)
+        {
+            if (AnimController.GetCurrentAnimatorStateInfo(0).IsName("Armature|idle")){
+                mov = 0;
+                AnimController.SetInteger("state", 2);
+            }
+        }
+        else {
+            mov = 0;
+            AnimController.SetInteger("state", 2);
+        }
+        
         Vector3 movInput = Vector3.zero;
         movInput.x = .001f;
         if (mov==0)
@@ -29,10 +42,12 @@ public class FoxAnimController : MonoBehaviour
     {
         if (obj.tag == "fruit")
         {
-            mov = 1;
             AnimController.SetInteger("state", 1);
+            mov = 1;
+
+            Audio.Play();
             Destroy(obj.gameObject);
-            yield WaitForSeconds(6);
+   
         }
     }
 }
