@@ -7,8 +7,6 @@ using UnityEngine;
 public class Control : MonoBehaviour
 {
     public float speed = 20.0f;
-    public int active = 1;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -23,32 +21,24 @@ public class Control : MonoBehaviour
             Vector3 movInput = Vector3.zero;
             movInput.x = -1;
             transform.position += movInput.normalized * speed * Time.deltaTime;
-            active = 1;
-        }
+}
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey("d"))
         {
             Vector3 movInput = Vector3.zero;
             movInput.x = 1;
             transform.position += movInput.normalized * speed * Time.deltaTime;
-            active = 1;
         }
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey("w"))
         {
             Vector3 movInput = Vector3.zero;
             movInput.z = 1;
             transform.position += movInput.normalized * speed * Time.deltaTime;
-            active = 1;
         }
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s"))
         {
             Vector3 movInput = Vector3.zero;
             movInput.z = -1;
             transform.position += movInput.normalized * speed * Time.deltaTime;
-            active = 1;
-        }
-        else
-        {
-            active = 0;
         }
         //if (Input.GetKey("q"))
         //{
