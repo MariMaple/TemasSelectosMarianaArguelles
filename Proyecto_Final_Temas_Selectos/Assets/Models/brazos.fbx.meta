@@ -1,28 +1,26 @@
 fileFormatVersion: 2
-guid: 0f473ca0af2f1cb49ba6d1d54e530a46
+guid: 1fcfd762dbe8ee346979fca235f6cbf9
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: -6057745757634168839
-    second: ArmatureIzq|Pickfruit
+      74: -3889830323219305035
+    second: walking
   - first:
-      74: 3212178738192139641
-    second: ArmatureDer|Pickfruit
+      74: 1792405951058616471
+    second: pickingFruits
   - first:
-      74: 2317457186055606076
-    second: Armature|Pickfruit
+      74: -4906752588214523090
+    second: Armature|pickingFruits
+  - first:
+      74: 7168293901883076996
+    second: Armature|walking
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mano
     second: {fileID: 2100000, guid: 9ad192086db94bf459df4752b99d27c6, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Manos
-    second: {fileID: 2800000, guid: 0bf0d0d45561bdc4c9516b53a4f05fbb, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -41,7 +39,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
+    importConstraints: 1
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -53,7 +51,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.3
+    globalScale: 0.33
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -100,14 +98,14 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.003
+    globalScale: 0.0033
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   avatarSetup: 0
   additionalBone: 0
