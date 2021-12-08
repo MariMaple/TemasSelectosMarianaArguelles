@@ -28,4 +28,15 @@ public class ArmController : MonoBehaviour
             AnimController.SetInteger("active", 0);
         }
     }
+    void OnTriggerEnter(Collider obj)
+    {
+        //if (obj.tag == "fruit")
+        //{
+        //    Destroy(obj.gameObject);
+        //}
+        if (obj.tag == "fruit")
+        {
+            AnimController.SetInteger("active", 2);
+        }
+    }
 }
