@@ -40,14 +40,14 @@ public class Control : MonoBehaviour
             movInput.z = -1;
             transform.position += movInput.normalized * speed * Time.deltaTime;
         }
-        //if (Input.GetKey("q"))
-        //{
-        //    transform.Rotate(new Vector3(0f, -90f, 0f) * Time.deltaTime);
-        //}
-        //if (Input.GetKey("e"))
-        //{
-        //    transform.Rotate(new Vector3(0f, 90f, 0f) * Time.deltaTime);
-        //}
+        if (Input.GetKey("q"))
+        {
+            transform.Rotate(new Vector3(0f, -90f, 0f) * Time.deltaTime);
+        }
+        if (Input.GetKey("e"))
+        {
+            transform.Rotate(new Vector3(0f, 90f, 0f) * Time.deltaTime);
+        }
     }
 
 }
